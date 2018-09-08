@@ -31,7 +31,7 @@ namespace Lab02.Controllers
         {
             string message =
                 HttpUtility.HtmlEncode("Location displayed for Zip = " + zip);
-            return message;
+               return message;
         }
     }
 }
