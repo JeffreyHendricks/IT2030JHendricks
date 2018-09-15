@@ -10,7 +10,9 @@ namespace Lab02.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            ViewBag.Message = "";
+            return View("~/Views/Other/Details.cshtml");
+            
         }
 
         public ActionResult About()
@@ -25,5 +27,7 @@ namespace Lab02.Controllers
 
             return View();
         }
+
+        
     }
 }
