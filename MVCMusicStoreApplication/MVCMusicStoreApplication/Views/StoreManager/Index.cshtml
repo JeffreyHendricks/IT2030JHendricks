@@ -26,6 +26,12 @@
         <th>
             @Html.DisplayNameFor(model => model.AlbumArtUrl)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryOfOrigin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InStock)
+        </th>
         <th></th>
     </tr>
 
@@ -45,6 +51,14 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AlbumArtUrl)
+        </td>
+        <td>
+            @Html.CheckBoxFor(modelItem => item.InStock)
+        </td>
+        <td>
+            @Html.RadioButtonFor(modelItem => item.CountryOfOrigin, "US")
+            @Html.RadioButtonFor(modelItem => item.CountryOfOrigin, "UK")
+            @Html.RadioButtonFor(modelItem => item.CountryOfOrigin, "Japan")
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.AlbumId }) |
