@@ -1,0 +1,75 @@
+﻿@model IEnumerable<enrollmentApplication.Models.Enrollment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.courseTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Course.courseCredits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.studentLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedCampus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnrollmentSemester)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnrollmentYear)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.courseTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course.courseCredits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.studentLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.grade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedCampus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnrollmentSemester)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnrollmentYear)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.enrollmentID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.enrollmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.enrollmentID })
+        </td>
+    </tr>
+}
+
+</table>

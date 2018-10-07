@@ -160,7 +160,8 @@
     </Compile>
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
-    <Compile Include="Models\enrollmentdb.cs" />
+    <Compile Include="Models\enrollmentApplicationdb.cs" />
+    <Compile Include="Models\EnrollmentsController.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -208,6 +209,11 @@
     <Content Include="Views\Enrollment\Details.cshtml" />
     <Content Include="Views\Enrollment\Edit.cshtml" />
     <Content Include="Views\Enrollment\Index.cshtml" />
+    <Content Include="Views\Enrollments\Create.cshtml" />
+    <Content Include="Views\Enrollments\Delete.cshtml" />
+    <Content Include="Views\Enrollments\Details.cshtml" />
+    <Content Include="Views\Enrollments\Edit.cshtml" />
+    <Content Include="Views\Enrollments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

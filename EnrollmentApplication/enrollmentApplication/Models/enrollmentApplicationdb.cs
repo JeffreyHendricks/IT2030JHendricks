@@ -6,7 +6,7 @@ using System.Web;
 
 namespace enrollmentApplication.Models
 {
-    public class enrollmentdb : DbContext
+    public class enrollmentApplicationdb : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,7 +15,7 @@ namespace enrollmentApplication.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public enrollmentdb() : base("name=enrollmentdb")
+        public enrollmentApplicationdb() : base("name=enrollmentApplicationdb")
         {
         }
 

@@ -6,22 +6,21 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using enrollmentApplication.Models;
 
-namespace enrollmentApplication.Controllers
+namespace enrollmentApplication.Models
 {
-    public class EnrollmentController : Controller
+    public class EnrollmentsController : Controller
     {
         private enrollmentApplicationdb db = new enrollmentApplicationdb();
 
-        // GET: Enrollment
+        // GET: Enrollments
         public ActionResult Index()
         {
             var enrollments = db.Enrollments.Include(e => e.Course).Include(e => e.Student);
             return View(enrollments.ToList());
         }
 
-        // GET: Enrollment/Details/5
+        // GET: Enrollments/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,7 +35,7 @@ namespace enrollmentApplication.Controllers
             return View(enrollment);
         }
 
-        // GET: Enrollment/Create
+        // GET: Enrollments/Create
         public ActionResult Create()
         {
             ViewBag.courseID = new SelectList(db.Courses, "courseID", "courseTitle");
@@ -44,7 +43,7 @@ namespace enrollmentApplication.Controllers
             return View();
         }
 
-        // POST: Enrollment/Create
+        // POST: Enrollments/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -63,7 +62,7 @@ namespace enrollmentApplication.Controllers
             return View(enrollment);
         }
 
-        // GET: Enrollment/Edit/5
+        // GET: Enrollments/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -80,7 +79,7 @@ namespace enrollmentApplication.Controllers
             return View(enrollment);
         }
 
-        // POST: Enrollment/Edit/5
+        // POST: Enrollments/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -98,7 +97,7 @@ namespace enrollmentApplication.Controllers
             return View(enrollment);
         }
 
-        // GET: Enrollment/Delete/5
+        // GET: Enrollments/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,7 +112,7 @@ namespace enrollmentApplication.Controllers
             return View(enrollment);
         }
 
-        // POST: Enrollment/Delete/5
+        // POST: Enrollments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

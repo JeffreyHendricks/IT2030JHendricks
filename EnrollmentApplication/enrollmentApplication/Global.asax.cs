@@ -14,7 +14,7 @@ namespace enrollmentApplication
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<enrollmentdb>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<enrollmentApplicationdb>());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
