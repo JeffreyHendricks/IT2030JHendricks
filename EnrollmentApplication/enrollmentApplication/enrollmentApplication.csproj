@@ -155,13 +155,41 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EnrollmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810120047008_InitialCreate.cs" />
+    <Compile Include="Migrations\201810120047008_InitialCreate.Designer.cs">
+      <DependentUpon>201810120047008_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810120102108_update1.cs" />
+    <Compile Include="Migrations\201810120102108_update1.Designer.cs">
+      <DependentUpon>201810120102108_update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810120159296_update11.cs" />
+    <Compile Include="Migrations\201810120159296_update11.Designer.cs">
+      <DependentUpon>201810120159296_update11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810122138225_update12.cs" />
+    <Compile Include="Migrations\201810122138225_update12.Designer.cs">
+      <DependentUpon>201810122138225_update12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810140049041_Notes1.cs" />
+    <Compile Include="Migrations\201810140049041_Notes1.Designer.cs">
+      <DependentUpon>201810140049041_Notes1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810150043548_student_update.cs" />
+    <Compile Include="Migrations\201810150043548_student_update.Designer.cs">
+      <DependentUpon>201810150043548_student_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\enrollmentApplicationdb.cs" />
     <Compile Include="Models\EnrollmentsController.cs" />
+    <Compile Include="Models\InvalidCharsAttribute.cs" />
+    <Compile Include="Models\MinimumAgeAttribute.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -214,6 +242,11 @@
     <Content Include="Views\Enrollments\Details.cshtml" />
     <Content Include="Views\Enrollments\Edit.cshtml" />
     <Content Include="Views\Enrollments\Index.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -230,6 +263,26 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810120047008_InitialCreate.resx">
+      <DependentUpon>201810120047008_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810120102108_update1.resx">
+      <DependentUpon>201810120102108_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810120159296_update11.resx">
+      <DependentUpon>201810120159296_update11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810122138225_update12.resx">
+      <DependentUpon>201810122138225_update12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810140049041_Notes1.resx">
+      <DependentUpon>201810140049041_Notes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810150043548_student_update.resx">
+      <DependentUpon>201810150043548_student_update.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
