@@ -11,13 +11,25 @@ namespace enrollmentApplication.Models
         readonly string chars;
         readonly string bChars;
         readonly string cChars;
-       
 
-        public InvalidCharsAttribute(string badChar, string badChar2, string badChars3):base("{0} has characters that are unnacceptable!")
+        public InvalidCharsAttribute(string newChar) : base("{0} has characters that are unnacceptable!")
         {
-            chars = badChar;
-            bChars = badChar2;
-            cChars = badChars3;
+            chars = newChar;
+            
+        }
+
+        public InvalidCharsAttribute(string newChar, string bChar) : base("{0} has characters that are unnacceptable!")
+        {
+            chars = newChar;
+            bChars = bChar;
+            
+        }
+
+        public InvalidCharsAttribute(string newChar, string bChar, string cChar):base("{0} has characters that are unnacceptable!")
+        {
+            chars = newChar;
+            bChars = bChar;
+            cChars = cChar;
         }
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
@@ -27,25 +39,15 @@ namespace enrollmentApplication.Models
                 int i = 0;
                 var valueAsString = value.ToString();
                 var x = valueAsString;
+                
 
-                while (i < valueAsString.Length)
+               for(i = 0; i < valueAsString.Length; i++)
                 {
-                    
-                    x = valueAsString.Substring(i);
-
-
-                    if (x.Equals(chars)|| x.Equals(bChars)|| x.Equals(cChars))
+                    if (x.Contains(chars[i])|| x.Contains(bChars[i])|| x.Contains(cChars[i]))
                     {
                         var errorMessage = FormatErrorMessage(validationContext.DisplayName);
-
                         return new ValidationResult(errorMessage);
-
                     }
-                    else
-                    {
-                        i++;
-                    }
-
                 }
             }
                 
