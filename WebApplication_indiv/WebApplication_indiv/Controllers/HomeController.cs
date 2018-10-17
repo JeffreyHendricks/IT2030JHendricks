@@ -4,10 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WebApp_noAuth.Controllers
+namespace WebApplication_indiv.Controllers
 {
+    
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
             return View();
@@ -15,12 +17,12 @@ namespace WebApp_noAuth.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "You application description page.";
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        [Authorize]
+        
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
