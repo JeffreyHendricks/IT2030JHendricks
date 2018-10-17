@@ -36,7 +36,7 @@ namespace enrollmentApplication.Models
         [Range(typeof(int), "2018", "2020")]
         public virtual int EnrollmentYear { get; set; }
 
-        [InvalidChars("@","#","$",ErrorMessage="You have entered a character that is not allowed!")]
+        [InvalidChars("@#$",ErrorMessage="You have entered a character that is not allowed!")]
         public virtual string Notes { get; set; }
     }
 }
