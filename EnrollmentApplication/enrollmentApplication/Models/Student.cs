@@ -24,11 +24,11 @@ namespace enrollmentApplication.Models
         [MinimumAge(20, ErrorMessage ="Age does not meet minimum requirements!")]
         public int Age { get; set; }
 
-        public string Address1 { get; set; }
-        public string Address2 { get; set; }
-        public string City { get; set; }
-        public string Zipcode { get; set; }
-        public string State { get; set; }
+        public virtual string Address1 { get; set; }
+        public virtual string Address2 { get; set; }
+        public virtual string City { get; set; }
+        public virtual string Zipcode { get; set; }
+        public virtual string State { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

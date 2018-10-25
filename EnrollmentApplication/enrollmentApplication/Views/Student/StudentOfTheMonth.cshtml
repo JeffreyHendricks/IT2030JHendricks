@@ -1,0 +1,15 @@
+﻿@model enrollmentApplication.Models.Student
+
+<h2>Student Of The Month</h2>
+<div>
+    <div class="panel-header">
+        Heres The student!
+    </div>
+    <div class="panel-body">
+        <p>Name: @Model.studentFirstName, @Model.studentLastName</p>
+    </div>
+</div>
+
+@section Scripts{
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    }
