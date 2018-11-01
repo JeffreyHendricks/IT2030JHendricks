@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MVCMusicStoreApplication.Models.Genre>
+
+@{
+    ViewBag.Title = "Browse";
+}
+<header>
+    <img src="~/Content/Images/logo.png" />
+</header>
+<h1>ASP.NET MVC MUSIC STORE</h1>
+
+<div>
+    <h2>Browse By Genre</h2>
+    <div class="panel-body">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@Html.ActionLink(@item.Name, "Index", new { id = item.GenreId })</li>
+            }
+        </ul>
+        <img src="~/Content/Images/logo.png" />
+    </div>
+</div>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
