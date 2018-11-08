@@ -2,10 +2,7 @@
 @{
     ViewBag.Title = "Details";
 }
-<header>
-    <img src="~/Content/Images/logo.png" />
-    <h1>ASP.NET MVC MUSIC STORE</h1>
-</header>
+
 <h2>Details</h2>
 <div>
     <p>Title:@Model.Title</p>
@@ -13,9 +10,9 @@
     <p>Artist: @Model.Artist.Name</p>
     <p>Price: @Model.Price</p>
     <p>Album Artwork: @Model.AlbumArtUrl</p>
-    <div>
+    <p class="button">
         @Html.ActionLink("Add To Cart", "AddToCart", "ShoppingCart", new { id = Model.AlbumId }, new { @class = "newBtn" })
-    </div>
+    </p>
 </div>
 
 
