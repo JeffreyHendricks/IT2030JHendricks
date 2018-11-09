@@ -42,9 +42,11 @@ namespace MVCMusicStoreApplication.Controllers
 
             ShoppingCart cart = ShoppingCart.GetCart(this.HttpContext);
 
-            int itemCnt = cart.RemoveFromCart(id);
+            
 
             string albumTitle = dbContext.Carts.SingleOrDefault(c => c.RecordId == id).AlbumSelected.Title;
+
+            int itemCnt = cart.RemoveFromCart(id);
 
             ShoppingCartRemoveViewModel vm = new ShoppingCartRemoveViewModel()
             {

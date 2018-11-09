@@ -86,7 +86,7 @@ namespace MVCMusicStoreApplication.Models
             if(cartItem != null)
             {
                 // cartItem count = 1
-                if (cartItem.Count >= 1)
+                if (cartItem.Count > 1)
                 {
 
                     cartItem.Count--;
