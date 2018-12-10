@@ -1,0 +1,34 @@
+﻿@model FinalEventApplication.Models.ViewModels.OrderViewModel
+
+@{ 
+    ViewBag.Title = "Heres my order page!";
+}
+
+<div>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>     </th>
+            <th>Total Tickets</th>
+            <th></th>
+
+
+
+        </tr>
+        @foreach (var item in Model.OrderItems)
+            
+
+                {
+        <tr>
+            <td>Sale ends on @item.EventSelected.StartDate</td>
+            <td>@item.EventSelected.Title</td>
+            <td>@item.EventSelected.AvailableTickets</td>
+            <td>@item.TicketCount</td>
+            <td><a href="#">Remove</a></td>
+            </tr>
+            }
+        
+
+    </table>
+</div>
+<button>@Html.ActionLink("Back To Home","Index", "Home")</button>

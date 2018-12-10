@@ -1,0 +1,37 @@
+﻿@model FinalEventApplication.Models.EventType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EventType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventTypeTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventTypeTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EventTypeDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventTypeDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EventTypeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

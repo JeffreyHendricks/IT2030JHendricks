@@ -1,0 +1,32 @@
+﻿@model IEnumerable<FinalEventApplication.Models.Event>
+
+<div class="LastMinuteDeals">
+
+    <h2 id="lEv">Last Minute Deals!</h2>
+
+    <div id="LastMinuteDeals-heading">
+        Here are the last minute deals!
+    </div>
+
+    <div id="LastMinuteDeals-body">
+        @foreach (var item in Model)
+        {
+            <ul>
+                <li>Title: @item.Title</li>
+                <li>Start Date: @item.StartDate</li>
+                <li>Location: @item.Location</li>
+                <li>"****************************************"</li>
+            </ul>
+        }
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/jqueryval")
+
+@section Scripts{
+
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+}

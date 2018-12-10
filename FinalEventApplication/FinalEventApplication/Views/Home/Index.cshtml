@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Main Events!";
+}
+
+
+<div class="main-events">
+    <div class="ids">
+        <p id="p-one"><b>Main Events</b> <br /> Find events near you!</p>
+    </div>
+</div>
+
+<div class="eventSearch-default">
+    <h3>Find Events Here!</h3>
+    <div id="eventSearch">
+        @using (Ajax.BeginForm("EventSearch", "Home",
+            new AjaxOptions
+            {
+                InsertionMode = InsertionMode.Replace,
+                HttpMethod = "GET",
+                UpdateTargetId = "eventSearch",
+                LoadingElementId = "img-loader",
+                OnFailure = "searchfailed"
+            }
+        )
+    )
+        {
+            <input type="text" name="q" id="searchEvents" placeholder="Enter Event name"/>
+            <input type="text" name="w" id="searchEvents" placeholder="Enter Location" />
+            <input type="submit" value="search" id="searchEventsButton" />
+            <img id="img-loader" src="@Url.Content("~/Content/Images/GamerTag1Redo.jpg")" style="display:none" />
+        }
+        <div id="eventSearch">
+
+        </div>
+    </div>
+</div>
+
+<div id="LastMinuteDeals">
+    @Ajax.ActionLink("Click Here To See Last Minute Events!", "LastMinuteDeals",null,
+    new AjaxOptions
+    {
+        UpdateTargetId = "LastMinuteDeals",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "GET",
+    },
+        new { @class = "nb btn btn-primary"}
+    )
+</div>
+
+@section Scripts{
+
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")

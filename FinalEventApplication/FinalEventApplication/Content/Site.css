@@ -1,0 +1,178 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #2a2a2a;
+    color:white;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.form-control:hover {
+    background-color: #e3e3e3;
+    border-color: #0094ff;
+}
+
+input[type=submit]{
+    background-color: #e3e3e3;
+}
+
+input[type=submit]:hover{
+    border-color: #0094ff;
+}
+
+/***************************************************************************************************/
+
+.navbar-brand {
+    background-image: url('Images/smashball-new.jpg');
+    background-size:40px;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.main-events {
+    background-image: url('Images/gaming-image-prethought2.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    padding:10px;
+    margin:10px;
+}
+#p-one{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:ghostwhite;
+    width:700px;
+    height:500px;
+    font-size:xx-large;
+    padding-top:10px;
+}
+
+/******************************************************************************************/
+
+hr {
+    border-color: grey;
+    width: 90%;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 60px;
+    padding-top: 20px;
+}
+
+#esHr {
+    border-color: grey;
+    width:30px;
+}
+
+footer {
+    color: grey;
+    width: 90%;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 60px;
+}
+
+/*****************************************************************************************/
+
+#LastMinuteDeals {
+    float: right;
+    color: #c6bfbf;
+    background-color: #363535;
+    width: 40%;
+    padding-top: 3px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.nb {
+    background-color: #1b203a !important;
+    border-radius: 30px;
+    border-color:grey;
+}
+
+#lEv{
+    text-decoration:underline;
+}
+
+
+.eventSearch {
+    color: #c6bfbf;
+    background-color: #363535;
+    border-radius: 15px 50px;
+    width: 80%;
+    padding-top: 3px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+.eventSearch-default {
+    border-color: grey;
+    background-color: #363535 !important;
+    padding: 15px;
+    width: 45%;
+    border-radius: 30px 50px;
+    float: left;
+}
+
+input[id=searchEvents] {
+    background-color: #6b6a6a;
+    color:aliceblue !important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: aliceblue;
+    opacity: .7;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: aliceblue;
+    opacity: .7;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: aliceblue;
+    opacity: .7;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: aliceblue;
+    opacity: .7;
+}
+
+#searchEventsButton {
+    background-color: #1b203a !important;
+    border-radius: 30px;
+}
+
+.backButton{
+    color:aliceblue;
+}
+
+.regButton{
+    color:aliceblue !important;
+}
+
